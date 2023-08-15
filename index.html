@@ -44,6 +44,7 @@
               </p>
               <div value="inputtextform" class="inputplaceholder">
                 <input
+                  id="phoneF"
                   placeholder="0721... ( required )"
                   type="text"
                   pattern="\d*"
@@ -60,6 +61,7 @@
               </p>
               <div class="inputplaceholder">
                 <input
+                  id="amountF"
                   type="text"
                   pattern="\d*"
                   placeholder="E.g. 200 Ksh"
@@ -113,7 +115,7 @@
           <br />
 
           <div spacing="md" class="buttonsection">
-            <button disabled="" class="">Donate</button>
+            <button disabled id="donateF">Donate</button>
           </div>
         </form>
 
@@ -124,6 +126,32 @@
     </div>
   </body>
   <script>
-    document.addEventListener("")
+    function activateSubmitButtonOnceFieldsAreFilled(){
+        let phoneNumber = ""
+        let donationAmount = ""
+
+        let phoneF = document.getElementById("phoneF")
+        let amountF = document.getElementById("amountF")
+        let donateButton = document.getElementById("donateF")
+
+        phoneF.addEventListener("input",(event) => {
+            phoneNumber = event.target.value
+            console.log(phoneNumber)
+            if(phoneNumber != "" && donationAmount != ""){
+                donateButton.disabled = false
+                donateButton.style.opacity="1"
+            }
+        })
+
+        amountF.addEventListener("input",(event) => {
+            donationAmount = event.target.value
+            console.log(donationAmount)
+            if(phoneNumber != "" && donationAmount != ""){
+                donateButton.disabled = false
+                donateButton.style.opacity="1"
+            }
+        })
+    }
+    activateSubmitButtonOnceFieldsAreFilled()
   </script>
 </html>
