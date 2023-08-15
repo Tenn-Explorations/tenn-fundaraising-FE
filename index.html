@@ -115,7 +115,10 @@
           <br />
 
           <div spacing="md" class="buttonsection">
-            <button disabled id="donateF">Donate</button>
+            <button disabled id="donateF">Donate
+                <!-- <iframe src="https://giphy.com/embed/ycfHiJV6WZnQDFjSWH" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/waiting-loading-load-ycfHiJV6WZnQDFjSWH">via GIPHY</a></p> -->
+                <img id="eye" hidden src="https://media.tenor.com/hlKEXPvlX48AAAAi/loading-loader.gif" width="25px" height="25px"/>
+            </button>
           </div>
         </form>
 
@@ -133,6 +136,12 @@
         let phoneF = document.getElementById("phoneF")
         let amountF = document.getElementById("amountF")
         let donateButton = document.getElementById("donateF")
+        let eye = document.getElementById("eye")
+
+        donateButton.addEventListener("click",()=>{
+            alert("click")
+            eye.hidden = false
+        })
 
         phoneF.addEventListener("input",(event) => {
             phoneNumber = event.target.value
