@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+* {
+  font-family: Inter, sans-serif !important;
+}
+
+body {
+  background: white;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.093) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-position: -19px -19px;
+}
+
+.wholePage {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: calc(100vh - 1rem);
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.formarea {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: calc(100vh - 1rem);
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.header {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.campaignTitle {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  text-align: center;
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  text-transform: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.campaignDesc {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  text-align: center;
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  opacity: 0.85;
+  text-transform: none;
+  font-size: 0.875rem;
+}
+
+form {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  border: 1px solid rgb(235, 237, 240);
+  border-radius: 1rem;
+}
+
+.form-section {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 1rem;
+}
+
+.form-section-in {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.inputtitle {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 0.25rem;
+  text-transform: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.inputplaceholder {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  transition: all 200ms ease-in-out 0s;
+  opacity: 1;
+  position: relative;
+  color: rgb(83, 97, 127);
+  font-size: 0.875rem;
+  height: 2.5rem;
+  border-radius: 0.375rem;
+}
+
+.inputtextform {
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  box-sizing: border-box;
+  margin: 0px;
+  user-select: auto;
+  outline: 0px;
+  color: rgb(50, 58, 76);
+  padding: 0px 1rem;
+  border-radius: 0.375rem;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  appearance: none;
+  white-space: nowrap;
+  font-size: inherit;
+  height: 100%;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(218, 222, 228);
+}
+
+.textareaform {
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  display: revert;
+  box-sizing: border-box;
+  margin: 0px;
+  user-select: auto;
+  transition: all 200ms ease-in-out 0s;
+  opacity: 1;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+  overflow: hidden;
+  min-height: 5rem;
+  outline: 0px;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  appearance: none;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  resize: auto;
+  color: rgb(50, 58, 76);
+  border-color: rgb(218, 222, 228);
+  background-color: rgb(255, 255, 255);
+}
+
+.buttonsection {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  color: rgb(50, 58, 76);
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 1.5rem;
+  flex-direction: row;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  font-family: Inter, sans-serif !important;
+  all: unset;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: all 200ms ease-in-out 0s;
+  opacity: 0.5;
+  background-color: rgb(34, 109, 244);
+  border: 0px solid rgb(34, 109, 244);
+  appearance: none;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 0;
+  outline: 0px;
+  white-space: nowrap;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+}
+
+.togglemagic{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    text-size-adjust: 100%;
+    color: rgb(50, 58, 76);
+    font-family: Inter,sans-serif!important;
+    all: unset;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.togglemagicok{
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    font-family: Inter,sans-serif!important;
+    all: unset;
+    box-sizing: border-box;
+    user-select: auto;
+    transition: all 200ms ease-in-out 0s;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    appearance: none;
+    box-shadow: none;
+    position: relative;
+    margin: 0px;
+    outline: 0px;
+    padding: 0px;
+    border: 1px solid rgb(184, 191, 203);
+    cursor: pointer;
+    background-color: rgb(184, 191, 203);
+    opacity: 1;
+    width: 2.25rem;
+    height: 1.25rem;
+    border-radius: 6249.94rem;
+}
+
+.togglemagicok:checked{
+    background-color: rgb(34, 109, 244);
+    border-color: rgb(34, 109, 244);
+}
+
+.togglemagicok::after {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    left: 1px;
+    transform: translate(0%, -50%);
+    transition: all 200ms ease-in-out 0s;
+}
+
+.togglemagicok:checked::after {
+    left: auto;
+    right: calc(1rem + 1px);
+    transform: translate(100%, -50%);
+}
+
