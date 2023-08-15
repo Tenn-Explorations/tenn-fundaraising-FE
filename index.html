@@ -39,11 +39,12 @@
           <div class="form-section">
             <div class="form-section-in">
               <p font-weight="medium" font-size="sm" class="inputtitle">
-                Full Name
+                Phone number
               </p>
               <div value="inputtextform" class="inputplaceholder">
                 <input
-                  placeholder="Name (optional)"
+                  placeholder="0721... ( required )"
+                  type="text" pattern="\d*"
                   class="inputtextform"
                   value=""
                 />
@@ -55,9 +56,9 @@
               <p font-weight="medium" font-size="sm" class="inputtitle">
                 Amount
               </p>
-              <div placeholder="0.0001 Eth" value="4" class="inputplaceholder">
+              <div class="inputplaceholder">
                 <input
-                  type="number"
+                  type="text" pattern="\d*"
                   placeholder="E.g. 200 Ksh"
                   class="inputtextform"
                 />
@@ -67,15 +68,43 @@
           <div class="form-section">
             <div class="form-section-in">
               <p font-weight="medium" font-size="sm" class="inputtitle">
-                Message ( Optional )
+                Name 
+                <span
+                font-size="sm"
+                class="campaignDesc"
+                style="color: rgba(0, 0, 255, 0.387); font-size: 13px"
+              >
+                ( Optional )
+              </span>
+              </p>
+              <div value="inputtextform" class="inputplaceholder">
+                <input
+                  placeholder="Name"
+                  class="inputtextform"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="form-section-in">
+              <p font-weight="medium" font-size="sm" class="inputtitle">
+                Message 
+                <span
+                font-size="sm"
+                class="campaignDesc"
+                style="color: rgba(0, 0, 255, 0.387); font-size: 13px"
+              >
+                ( Optional )
+              </span>
               </p>
               <div
-                placeholder="E.g. Congratulations, you have received we've recieved your order!"
+                placeholder="E.g. Everything is going to be fine"
                 class="inputplaceholder"
                 value=""
               >
                 <textarea
-                  placeholder="E.g. Congratulations, you have received we've recieved your order!"
+                    placeholder="E.g. Everything is going to be fine"
                   class="textareaform"
                 ></textarea>
               </div>
