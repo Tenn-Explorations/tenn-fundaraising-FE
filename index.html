@@ -8,15 +8,15 @@
   </head>
   <body>
     <div type="sm" class="wholePage">
-        <!-- <nav>JJ</nav> -->
+      <!-- <nav>JJ</nav> -->
       <div height="calc(100vh - 1rem)" class="formarea">
         <div class="header">
           <p font-size="xl" font-weight="600" class="campaignTitle">
             James Kamau GTR Fund
           </p>
           <br />
-          <p font-size="sm" class="campaignDesc">
-            A simple web3 dapp that makes sending Eth to anyone a breeze ⚡
+          <p font-size="sm" class="campaignDesc" style="font-size: 13px; width: 80%;margin: 0 auto;">
+            Helping Jame drive again will hopefully support and be part of this tough journey with him ⚡️
           </p>
           <br />
           <p
@@ -115,9 +115,15 @@
           <br />
 
           <div spacing="md" class="buttonsection">
-            <button disabled id="donateF">Donate
-                <!-- <iframe src="https://giphy.com/embed/ycfHiJV6WZnQDFjSWH" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/waiting-loading-load-ycfHiJV6WZnQDFjSWH">via GIPHY</a></p> -->
-                <img id="eye" hidden src="https://media.tenor.com/hlKEXPvlX48AAAAi/loading-loader.gif" width="25px" height="25px"/>
+            <button disabled id="donateF">
+              Pay now
+              <img
+                id="eye"
+                hidden
+                src="https://media.tenor.com/hlKEXPvlX48AAAAi/loading-loader.gif"
+                width="25px"
+                height="25px"
+              />
             </button>
           </div>
         </form>
@@ -128,40 +134,50 @@
       </div>
     </div>
   </body>
-  <script>
-    function activateSubmitButtonOnceFieldsAreFilled(){
-        let phoneNumber = ""
-        let donationAmount = ""
+  <script src="./pay.js"></script>
+  <script defer>
+    function activateSubmitButtonOnceFieldsAreFilled() {
+      let phoneNumber = "";
+      let donationAmount = "";
 
-        let phoneF = document.getElementById("phoneF")
-        let amountF = document.getElementById("amountF")
-        let donateButton = document.getElementById("donateF")
-        let eye = document.getElementById("eye")
+      let phoneF = document.getElementById("phoneF");
+      let amountF = document.getElementById("amountF");
+      let donateButton = document.getElementById("donateF");
+      let eye = document.getElementById("eye");
 
-        donateButton.addEventListener("click",(e)=>{
-            e.preventDefault()
-            alert("click")
-            eye.hidden = false
-        })
+      function customCallback(transactionMetadata) {
+        eye.hidden = true;
+        alert(JSON.stringify(transactionMetadata, null, 2));
+      }
 
-        phoneF.addEventListener("input",(event) => {
-            phoneNumber = event.target.value
-            console.log(phoneNumber)
-            if(phoneNumber != "" && donationAmount != ""){
-                donateButton.disabled = false
-                donateButton.style.opacity="1"
-            }
-        })
+      phoneF.addEventListener("input", (event) => {
+        phoneNumber = event.target.value;
+        console.log(phoneNumber);
+        if (phoneNumber != "" && donationAmount != "") {
+          donateButton.disabled = false;
+          donateButton.style.opacity = "1";
+        }
+      });
 
-        amountF.addEventListener("input",(event) => {
-            donationAmount = event.target.value
-            console.log(donationAmount)
-            if(phoneNumber != "" && donationAmount != ""){
-                donateButton.disabled = false
-                donateButton.style.opacity="1"
-            }
-        })
+      amountF.addEventListener("input", (event) => {
+        donationAmount = event.target.value;
+        console.log(donationAmount);
+        if (phoneNumber != "" && donationAmount != "") {
+          donateButton.disabled = false;
+          donateButton.style.opacity = "1";
+        }
+      });
+
+      donateButton.addEventListener("click", (e) => {
+        eye.hidden = false;
+        e.preventDefault();
+        PayWithTenn(Number(donationAmount), phoneNumber, customCallback).then(
+          (successInfo) => {
+            console.log(successInfo);
+          }
+        );
+      });
     }
-    activateSubmitButtonOnceFieldsAreFilled()
+    activateSubmitButtonOnceFieldsAreFilled();
   </script>
 </html>
