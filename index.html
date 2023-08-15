@@ -138,7 +138,8 @@
         let donateButton = document.getElementById("donateF")
         let eye = document.getElementById("eye")
 
-        donateButton.addEventListener("click",()=>{
+        donateButton.addEventListener("click",(e)=>{
+            e.preventDefault()
             alert("click")
             eye.hidden = false
         })
