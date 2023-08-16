@@ -15,8 +15,13 @@
             James Kamau GTR Fund
           </p>
           <br />
-          <p font-size="sm" class="campaignDesc" style="font-size: 13px; width: 80%;margin: 0 auto;">
-            Helping Jame drive again will hopefully support and be part of this tough journey with him ⚡️
+          <p
+            font-size="sm"
+            class="campaignDesc"
+            style="font-size: 13px; width: 80%; margin: 0 auto"
+          >
+            Helping Jame drive again will hopefully support and be part of this
+            tough journey with him ⚡️
           </p>
           <br />
           <p
@@ -36,7 +41,44 @@
             👨‍👩‍👧‍👦 45 contirbutors
           </p>
         </div>
-        <form>
+        <div
+          role="tablist"
+          aria-orientation="horizontal"
+          class="buttonTab"
+          tabindex="0"
+          data-orientation="horizontal"
+          style="outline: none"
+        >
+          <button
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="radix-:r2:-content-account"
+            data-state="active"
+            id="radix-:r2:-trigger-account"
+            class="activeMethod"
+            tabindex="0"
+            data-orientation="horizontal"
+            data-radix-collection-item=""
+          >
+            <img src="./mpesa.svg" alt="" srcset="" />
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="radix-:r2:-content-password"
+            data-state="active"
+            id="radix-:r2:-trigger-password"
+            class="inactiveMethod"
+            style="padding: 4px; transform: translate(0 -20px)"
+            data-orientation="horizontal"
+            data-radix-collection-item=""
+          >
+            💳 Cards
+          </button>
+        </div>
+        <form style="transition: width 2s, height 4s">
           <div class="form-section">
             <div class="form-section-in">
               <p font-weight="medium" font-size="sm" class="inputtitle">
@@ -45,7 +87,7 @@
               <div value="inputtextform" class="inputplaceholder">
                 <input
                   id="phoneF"
-                  placeholder="0721... ( required )"
+                  placeholder="E.g. 0721 ..."
                   type="text"
                   pattern="\d*"
                   class="inputtextform"
@@ -70,7 +112,26 @@
               </div>
             </div>
           </div>
-          <div class="form-section">
+
+          <div style="display: flex; justify-content: space-between">
+            <div>
+              <!-- <div class="form-section-in"> -->
+              <p font-weight="medium" font-size="sm" class="inputtitle">
+                Contribute Anonymously
+              </p>
+              <p font-size="sm" class="campaignDesc">
+                You name will not show up in the contribution list
+              </p>
+            </div>
+            <label class="toggle">
+              <input class="toggle-checkbox" type="checkbox" id="anontoogle" checked/>
+              <div class="toggle-switch"></div>
+              <!-- <span class="toggle-label">Wi-fi</span> -->
+            </label>
+          </div>
+          <br />
+
+          <div class="form-section hideme" id="namesection">
             <div class="form-section-in">
               <p font-weight="medium" font-size="sm" class="inputtitle">
                 Name
@@ -87,31 +148,6 @@
               </div>
             </div>
           </div>
-          <div class="form-section">
-            <div class="form-section-in">
-              <p font-weight="medium" font-size="sm" class="inputtitle">
-                Message
-                <span
-                  font-size="sm"
-                  class="campaignDesc"
-                  style="color: rgba(0, 0, 255, 0.387); font-size: 13px"
-                >
-                  ( Optional )
-                </span>
-              </p>
-              <div
-                placeholder="E.g. Everything is going to be fine"
-                class="inputplaceholder"
-                value=""
-              >
-                <textarea
-                  placeholder="E.g. Everything is going to be fine"
-                  class="textareaform"
-                ></textarea>
-              </div>
-            </div>
-          </div>
-          <br />
           <br />
 
           <div spacing="md" class="buttonsection">
@@ -143,7 +179,21 @@
       let phoneF = document.getElementById("phoneF");
       let amountF = document.getElementById("amountF");
       let donateButton = document.getElementById("donateF");
+      let anonToggle = document.getElementById("anontoogle");
       let eye = document.getElementById("eye");
+      let nameSection = document.getElementById("namesection");
+
+      let nonce = false;
+
+      anonToggle.addEventListener("change", (event) => {
+        if (nonce) {
+          nameSection.classList.add("hideme");
+        } else {
+          nameSection.classList.remove("hideme");
+        }
+
+        nonce = !nonce;
+      });
 
       function customCallback(transactionMetadata) {
         eye.hidden = true;
